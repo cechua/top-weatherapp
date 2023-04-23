@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script defer src="main.js"></script>
+    <style>
+      .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 50px;
+        height: 50px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+        display: none;
+      }
+
+      /* Safari */
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form class="location-form">
+      <select id="location-name">
+        <option value="manila">Manila</option>
+        <option value="london">London</option>
+        <option value="singapore">Singapore</option>
+      </select>
+      <button type="button" class="button-submit" id="button-submit-location">
+        View Selected Location
+      </button>
+    </form>
+    <div class="loader" id="result-loader"></div>
+    <div id="weather-result-container">
+      <div id="weather-location"></div>
+      <div id="weather-temperature"></div>
+      <div id="weather-humidity"></div>
+      <div id="weather-wind"></div>
+    </div>
+  </body>
+</html>
